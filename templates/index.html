@@ -1,102 +1,224 @@
 <!DOCTYPE html>
-<html lang="en">
+<meta charset="utf-8">
+<style>
 
-  <head>
+svg {
+  float: left;
+  padding: 10px;
+}
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Overview of my college career">
-    <meta name="author" content="Conor Dewey">
+.node circle {
+  fill: #999;
+}
 
-    <h1>College Career Visualization</h1>
+.node text {
+  font: 16px roboto;
+}
 
-    <!-- Bootstrap core CSS -->
+.node--internal circle {
+  fill: #555;
+}
 
-    <!-- Custom styles for this template -->
-    <style>
+.node--internal text {
+  text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
+}
 
-        .node circle {
-          fill: #999;
-        }
+.link {
+  fill: none;
+  stroke: #555;
+  stroke-opacity: 0.4;
+  stroke-width: 1px;
+}
 
-        .node text {
-          font: 10px sans-serif;
-        }
+body {
+  padding: 0;
+  margin:0;
+}
 
-        .node--internal circle {
-          fill: #555;
-        }
+div.sidebar {
+  padding: 10px;
+  display: block;
+  width: 450px;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+  right: 0;
+  top: 0;
+}
 
-        .node--internal text {
-          text-shadow: 0 1px 0 #fff, 0 -1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff;
-        }
+div.mainContent {
+  margin-left: 10px;
+  padding: 10px;
+}
 
-        .link {
-          fill: none;
-          stroke: #555;
-          stroke-opacity: 0.4;
-          stroke-width: 1.5px;
-        }
+</style>
+<body>
 
-    </style>
 
-  </head>
+<div class="sidebar">
+  ... sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
+    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf
+     sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
+    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf
+     sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
+    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf
+     sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
+    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf
+     sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
+    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf
+     sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
+    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf
+     sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
+    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf
+     sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
+    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf
+     sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
+    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf
+     sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
+    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf
+ sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
+    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf
+     sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
+    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf
+     sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
+    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf
+     sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
+    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf
+     sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
+    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf
+     sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
+    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
+    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf
+     sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
+    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf
+     sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
+    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf
+     sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
+    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf
+     sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
+    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
+    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf
+     sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
+    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
+    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
+    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
+    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
+    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
+    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
+    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
+    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
+    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
+    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
+    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf
 
-  <body>
 
-    <!-- Bootstrap core JavaScript -->
-    <svg width="960" height="1060"></svg>
-    <script src="https://d3js.org/d3.v4.min.js"></script>
-    <script>
 
-    var svg = d3.select("svg"),
-        width = +svg.attr("width"),
-        height = +svg.attr("height"),
-        g = svg.append("g").attr("transform", "translate(" + (width / 2 + 40) + "," + (height / 2 + 90) + ")");
 
-    var stratify = d3.stratify()
-        .parentId(function(d) { return d.id.substring(0, d.id.lastIndexOf(".")); });
 
-    var tree = d3.tree()
-        .size([2 * Math.PI, 500])
-        .separation(function(a, b) { return (a.parent == b.parent ? 1 : 2) / a.depth; });
 
-    d3.csv("/static/flare.csv", function(error, data) {
-          if (error) throw error;
 
-          var root = tree(stratify(data));
 
-          var link = g.selectAll(".link")
-            .data(root.links())
-            .enter().append("path")
-              .attr("class", "link")
-              .attr("d", d3.linkRadial()
-                  .angle(function(d) { return d.x; })
-                  .radius(function(d) { return d.y; }));
 
-          var node = g.selectAll(".node")
-            .data(root.descendants())
-            .enter().append("g")
-              .attr("class", function(d) { return "node" + (d.children ? " node--internal" : " node--leaf"); })
-              .attr("transform", function(d) { return "translate(" + radialPoint(d.x, d.y) + ")"; });
 
-          node.append("circle")
-              .attr("r", 2.5);
 
-          node.append("text")
-              .attr("dy", "0.31em")
-              .attr("x", function(d) { return d.x < Math.PI === !d.children ? 6 : -6; })
-              .attr("text-anchor", function(d) { return d.x < Math.PI === !d.children ? "start" : "end"; })
-              .attr("transform", function(d) { return "rotate(" + (d.x < Math.PI ? d.x - Math.PI / 2 : d.x + Math.PI / 2) * 180 / Math.PI + ")"; })
-              .text(function(d) { return d.id.substring(d.id.lastIndexOf(".") + 1); });
-        });
 
-    function radialPoint(x, y) {
-      return [(y = +y) * Math.cos(x -= Math.PI / 2), y * Math.sin(x)];
-    }
 
-    </script>
 
-  </body>
 
+</div>
+
+<div class="mainContent">
+
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script>
+  var root = {"name" : "", "children" : [
+                      {"name" : "Natural Science", "children" : [
+                  {"name" : "Chemistry", "children" :
+                      [{"name" : "General Chemistry" }, {"name" : "General Chemistry Lab" }]},
+                  {"name" : "Physics", "children" :
+                      [{"name" : "Foundations of Physics I" }]},
+                  {"name" : "Food Science", children: [{"name" : "Brewing Science and Technology"}]},
+
+              ] },
+              {"name" : "Mathematics", "children" : [
+                  {"name" : "Calculus", "children" : [{"name" : "Calculus of a Single Variable"},
+                  {"name" : "Intro Multivariable Calculus"},{"name" : "Intro Differential Equations"}]},
+                  {"name" : "Algebra", "children" : [{"name" : "Intro Linear Algebra"}]},
+                  {"name" : "Statistics", "children" : [{"name" : "Statistical Methods I"},
+                  {"name" : "Statistical Methods II"}, {"name" : "Probability and Distributions"},
+                  {"name" : "Experimental Designs"}]},
+                  {"name" : "Discrete Math", "children" : [{"name" : "Intro Discrete Math"}]},
+                  {"name" : "Combinatorics", "children" : [{"name" : "Applied Combinatorics"}]},
+                  {"name" : "Cryptography", "children" : [{"name" : "Cryptography I"}]}
+              ] },
+              {"name" : "Business", "children" : [
+                  {"name" : "Communication", "children" : [{"name" : "Public Speaking"}]},
+                  {"name" : "Management", "children" : [{"name" : "Cornerstones Entrepreneurship"}]},
+              ] },
+              {"name" : "Engineering", "children" : [
+                  {"name" : "Foundations of Engineering I"},
+                  {"name" : "Foundations of Engineering II"},
+                  {"name" : "Intro Spatial Visualization"}
+              ] },
+                {"name" : "Humanities", "children" : [
+                  {"name" : "Philosophy", children: [{"name" : "Knowledge and Reality"}]},
+                  {"name" : "Geography", children: [{"name" : "World Regions"}]},
+                  {"name" : "Fine Arts", children: [{"name" : "Creativity & Aesthetic Experience"}]},
+                  {"name" : "Music", children: [{"name" : "Music Appreciation"}]},
+                  {"name" : "Social Studies", children: [{"name" : "Monsters, Zombies, & Cyborgs"}]},
+                    {"name" : "Human Development", children: [{"name" : "Human Development I"},
+                  {"name" : "Human Development II"}]},
+              ]},
+                {"name" : "Computer Science", "children" : [
+                  {"name" : "Software Design & Data Structures"},
+                  {"name" : "Intro Computer Organization"},
+                  {"name" : "Data Structures and Algorithms"},
+                  {"name" : "Human-Computer Interaction"}
+              ] },
+                      {"name" : "Data Science", "children" : [
+                  {"name" : "Intro Data Analytics & Visualization"},
+                  {"name" : "Math Modeling: Methods & Tools I"},
+                  {"name" : "Math Modeling: Methods & Tools II"},
+                  {"name" : "Comp Sci Foundations for CMDA"},
+                  {"name" : "Intermediate Data Analytics & Machine Learning"},
+                  {"name" : "Computer Modeling & Data Analytics Capstone"}
+              ] },
+                  ]};
+
+  var diameter = 1300;
+  var tree = d3.layout.tree()
+      .size([360, diameter / 2 - 190])
+      .separation(function(a, b) { return (a.parent == b.parent ? 1 : 2) / a.depth; });
+  var diagonal = d3.svg.diagonal.radial()
+      .projection(function(d) { return [d.y, d.x / 180 * Math.PI]; });
+  var svg = d3.select("body").append("svg")
+      .attr("width", diameter + 20)
+      .attr("height", diameter - 40)
+    .append("g")
+      .attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");
+    var nodes = tree.nodes(root),
+        links = tree.links(nodes);
+    var link = svg.selectAll(".link")
+        .data(links)
+      .enter().append("path")
+        .attr("class", "link")
+        .attr("d", diagonal);
+    var node = svg.selectAll(".node")
+        .data(nodes)
+      .enter().append("g")
+        .attr("class", "node")
+        .attr("transform", function(d) { return "rotate(" + (d.x - 90) + ")translate(" + d.y + ")"; })
+    node.append("circle")
+        .attr("r", 5);
+    node.append("text")
+        .attr("dy", ".31em")
+        .attr("text-anchor", function(d) { return d.x < 180 ? "start" : "end"; })
+        .attr("transform", function(d) { return d.x < 180 ? "translate(8)" : "rotate(180)translate(-8)"; })
+        .text(function(d) { return d.name; });
+  d3.select(self.frameElement).style("height", diameter - 150 + "px");
+  </script>
+</div>
+
+
+</body>
 </html>
