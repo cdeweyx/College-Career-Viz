@@ -3,8 +3,8 @@
 <style>
 
 svg {
-  float: left;
-  padding: 10px;
+  position: absolute;
+  left: -45px;
 }
 
 .node circle {
@@ -12,7 +12,7 @@ svg {
 }
 
 .node text {
-  font: 16px roboto;
+  font: 11px roboto;
 }
 
 .node--internal circle {
@@ -26,19 +26,15 @@ svg {
 .link {
   fill: none;
   stroke: #555;
-  stroke-opacity: 0.4;
-  stroke-width: 1px;
+  stroke-opacity: 0.3;
+  stroke-width: .75px;
 }
 
-body {
-  padding: 0;
-  margin:0;
-}
 
 div.sidebar {
   padding: 10px;
   display: block;
-  width: 450px;
+  width: 375px;
   position: fixed;
   height: 100vh;
   overflow-y: auto;
@@ -46,85 +42,222 @@ div.sidebar {
   top: 0;
 }
 
-div.mainContent {
-  margin-left: 10px;
-  padding: 10px;
-}
+
 
 </style>
+
+<head>
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+</head>
+
+
 <body>
 
 
 <div class="sidebar">
-  ... sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
-    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf
-     sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
-    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf
-     sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
-    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf
-     sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
-    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf
-     sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
-    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf
-     sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
-    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf
-     sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
-    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf
-     sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
-    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf
-     sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
-    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf
-     sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
-    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf
- sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
-    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf
-     sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
-    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf
-     sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
-    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf
-     sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
-    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf
-     sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
-    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf
-     sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
-    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
-    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf
-     sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
-    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf
-     sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
-    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf
-     sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
-    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf
-     sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
-    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
-    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf
-     sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
-    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
-    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
-    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
-    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
-    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
-    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
-    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
-    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
-    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
-    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf sidebar stuff here ...fasdfdsfsdfdsfsdfdsfsdfsdafdsfsdafsdfjkhsadjkfhklj
-    sdahfkjhsadkjfhasjkdhfjksdahfkjhsdjkfhkjsdhfjkhsdkjfhdjkshfjksdhjfhsdjkahfhdsfkjsdhfsdfsfsdafdsf
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<div class="well">
+    <h2><b>Courses</b></h2>
+    <hr>
+    <h4><b>Fall 2018</b></h4>
+    <h5><b>CMDA Capstone</b></h5>
+    <p>Capstone research project for Computational Modeling and Data Analytics majors. Cultivates skills including
+        reviewing the literature, creative problem solving, teamwork, critical thinking, and oral, written, and
+        visual communications.</p>
+    <hr>
+    <h5><b>Experimental Designs</b></h5>
+    <p>Fundamental principles of designing and analyzing experiments with application to problems in various
+        subject matter areas. Discussion of completely randomized, randomized complete block, and Latin square
+        designs, analysis of covariance, split-plot designs, factorial and fractional designs, incomplete
+        block designs.</p>
+    <hr>
+    <h5><b>Human-Computer Interaction</b></h5>
+    <p>Survey of human-computer interaction concepts, theory, and practice. Basic components of human-computer
+        interaction. Interdisciplinary underpinnings. Informed and critical evaluation of computer-based technology.
+        User-oriented perspective, rather than system-oriented, with two thrusts: human (cognitive, social) and
+        technological (input/output, interactions styles, devices). Design guidelines, evaluation methods,
+        participatory design, communication between users and system developers.</p>
+    <hr>
+    <h5><b>Brewery Science and Technology</b></h5>
+    <p>Study of chemical reactions important in brewing of beer and hard cider. Effects of variations in malting,
+        mashing, and other processing steps on characteristics and quality of beer; fruit sugar, acid and
+        fermentation impacts on cider composition and quality. Investigation of reactions that cause flavor
+        deterioration.</p>
+    <hr>
+    <h5><b>Monsters, Zombies, & Cyborgs</b></h5>
+    <p>Examination of social and cultural issues that shape, and are shaped by, the conduct of scientific,
+        technological, and medical research and activity. Topics such as human genetic and technological
+        enhancement; surveillance technologies and civil rights; environmental intervention and preservation;
+        precautionary and proactionary approaches to public policy making. Course repeatable up to 12 hours with
+        different topics.</p>
+        <hr>
+    <h4><b>Spring 2018</b></h4>
+    <h5><b>Intermediate Data Analytics & ML</b></h5>
+    <p>A technical analytics course. Covers supervised and unsupervised learning strategies, including regression,
+        generalized linear models, regularization, dimension reduction methods, tree-based methods for classification,
+        and clustering. Upper-level analytical methods shown in practice: e.g., advanced naive Bayes and neural
+        networks.</p>
+    <hr>
+    <h5><b>Math Modeling: Methods & Tools II</b></h5>
+    <p>Concepts and techniques from numerical linear algebra, including iterative methods for solving
+        linear systems and least squares problems, and numerical approaches for solving eigenvalue problems.
+        III-posed inverse problems such as parameter estimation, and numerical methods for computing solutions
+        to inverse problems. Numerical optimization. Emphasis on large-scale problems.</p>
+    <hr>
+    <h5><b>Applied Combinatorics</b></h5>
+    <p>Emphasis on concepts related to computational theory and formal languages. Includes topics in
+        graph theory such as paths, circuits, and trees. Topics from combinatorics such as permutations,
+        generating functions, and recurrence relations.</p>
+    <hr>
+    <h5><b>Cryptography I</b></h5>
+    <p>Elementary concepts in cryptography; classical cryptosystems; modern symmetric cryptography; public key
+        cryptography; digital signatures, authentication schemes; modular arithmetic, primitive roots, primality
+        testing.</p>
+    <hr>
+    <h4><b>Fall 2017</b></h4>
+    <h5><b>Comp Sci Foundations for CMDA</b></h5>
+    <p>Survey of computer science concepts and tools that enable computational science and data analytics.
+        Data structure design and implementation. Analysis of data structure and algorithm performance.
+        Introduction to high-performance computer architectures and parallel computation. Basic operating systems
+        concepts that influence the performance of large-scale computational modeling and data analytics. Software
+        development and software tools for computational modeling.</p>
+    <hr>
+    <h5><b>Math Modeling: Methods & Tools I</b></h5>
+    <p>Mathematical modeling with ordinary differential equations and difference equations.
+        Numerical solution and analysis of ordinary differential equations and difference equations.
+        Stochastic modeling, and numerical solution of stochastic differential equations.</p>
+    <hr>
+    <h5><b>Data Structures and Algorithms</b></h5>
+    <p>Advanced data structures and analysis of data structure and algorithm performance.
+        Sorting, searching, hashing, and advanced tree structures and algorithms. File system
+        organization and access methods. Course projects require advanced problem-solving, design,
+        and implementation skills. </p>
+    <hr>
+    <h5><b>Cornerstones Entrepreneurship</b></h5>
+    <p>Provides a cornerstone foundation for the understanding of entrepreneurship and the business
+        innovation process exposing students to fundamental business concepts applied and integrated
+        in these arenas. An examination of value creation through entrepreneurship and the rudiments of
+        new ventures are provided helping students develop an entrepreneurial frame of mind and perspective.</p>
+    <hr>
+    <h4><b>Spring 2017</b></h4>
+    <h5><b>Probability and Distributions</b></h5>
+    <p>Probability theory, including set theoretic and combinatorial concepts; in-depth treatment of
+        discrete random variables and distributions, with some introduction to continuous random variables;
+        introduction to estimation and hypothesis testing.</p>
+    <hr>
+    <h5><b>Statistical Methods II</b></h5>
+    <p>Analysis of variance, simple and multiple, linear and nonlinear regression, analysis of covariance. Use of
+        MINITAB. WIN or CMS. </p>
+    <hr>
+    <h5><b>Intro to Computer Organization</b></h5>
+    <p>An introduction to the design and operation of digital computers. Works up from the logic gate level
+        to combinational and sequential circuits, information representation, computer arithmetic,
+        arithmetic/logic units, control unit design, basic computer organization, relationships between
+        high level programming languages and instruction set architectures. </p>
+    <hr>
+    <h5><b>Intro Discrete Math</b></h5>
+    <p>Emphasis on topics relevant to computer science. Topics include logic, propositional calculus,
+        set theory, relations, functions, mathematical induction, elementary number theory and Boolean algebra. </p>
+    <hr>
+    <h5><b>Intro Differential Equations</b></h5>
+    <p>Unified course in ordinary differential equations. First-order equations, second and higher-order
+        linear equations, systems of first-order linear equations, and numerical methods. </p>
+    <hr>
+    <h5><b>Creativity & Aesthetic Experience</b></h5>
+    <p>Guided exposure to participation in various experiences in the visual and performing arts;
+        interaction with both historians/critics and practitioners prior to and after such experiences;
+        examination of the many processes through which the visual and performing arts are created and
+        communicated and how these arts illuminate and help to explain human experience.</p>
+    <hr>
+    <h4><b>Fall 2016</b></h4>
+    <h5><b>Intro Data Analytics & Visualization</b></h5>
+    <p>Basic principles and techniques in data analytics; methods for the collection of, storing, accessing,
+        and manipulating standard-size and large datasets; data visualization; and identifying sources of bias.</p>
+    <hr>
+    <h5><b>Intro to Linear Algebra</b></h5>
+    <p>Vector and matrix algebra, systems of linear equations, linear equations, linear independence,
+        bases, orthonormal bases, rank, linear transformations, diagonalization, implementation with
+        contemporary software.</p>
+    <hr>
+    <h5><b>Statistical Methods I</b></h5>
+    <p>Basic statistical methodology: exploratory data techniques, estimation, inference, comparative analysis by
+        parametric, nonparametric, and robust procedures. Analysis of variance (one-way), multiple comparisons,
+        and categorical data.</p>
+    <hr>
+    <h5><b>Human Development II</b></h5>
+    <p>Introduction to adult development and aging (gerontology). Basic concepts, principles, and issues of
+        development across the adult years. </p>
+    <hr>
+    <h5><b>Music Appreciation</b></h5>
+    <p>Introduction to fundamental aspects of Western Art Music of major periods to give the student a basic
+        understanding of the breadth and nature of this art form. </p>
+    <hr>
+    <h4><b>Spring 2016</b></h4>
+    <h5><b>Intro Multivariable Calculus</b></h5>
+    <p>Calculus for functions for several variables. Planes and surfaces, continuity, differentiation, chain rule,
+        extreme values, Lagrange multipliers, double and triple integrals and applications, software-based
+        techniques. </p>
+    <hr>
+    <h5><b>Foundations of Engineering II</b></h5>
+    <p>A first-year sequence to introduce general engineering students to the profession, including data
+        collection and analysis, engineering problem-solving, mathematical modeling design, contemporary
+        software tools, professional practices and expectations (e.g. communication, teamwork, ethics),
+        and the diversity of fields and majors within engineering. </p>
+    <hr>
+    <h5><b>Foundations of Physics I</b></h5>
+    <p>First two semesters of the three-semester introductory sequence for students in physical sciences and
+        mathematics. Includes classical mechanics, gravity, and waves.</p>
+    <hr>
+    <h5><b>Public Speaking</b></h5>
+    <p>Strategies and practice for speaking to specific audiences. Ethical considerations for message
+        preparation, development, presentation, and evaluation.</p>
+    <hr>
+    <h5><b>Human Development I</b></h5>
+    <p>Basic concepts related to normal human development. Emphasis on developmental theories and principles of
+        growth, development, and behavior of children from conception through adolescence. Designed as a
+        general survey course for majors and non-majors.</p>
+    <hr>
+    <h5><b>World Regions</b></h5>
+    <p>Human and physical patterns of major regions of the world. Concepts and perspectives of geography as a
+        social science; linkages and interdependence of nations and regions. </p>
+    <hr>
+    <h4><b>Fall 2015</b></h4>
+    <h5><b>Software Design & Data Structures</b></h5>
+    <p>A programming-intensive exploration of software design concepts and implementation techniques.
+        Builds on knowledge of fundamental object-oriented programming. Advanced object-oriented software design,
+        algorithm development and analysis, and classic data structures. Includes a team-based, semester-long
+        software project. </p>
+    <hr>
+    <h5><b>Calculus of a Single Variable</b></h5>
+    <p>Contains techniques and applications of integration, trapezoidal and Simpson's rules, improper integrals,
+        sequences and series, power series, parametric curves and polar coordinates, software-based techniques. </p>
+    <hr>
+    <h5><b>Foundations of Engineering I</b></h5>
+    <p>A first-year sequence to introduce general engineering students to the profession, including data
+        collection and analysis, engineering, problem-solving, mathematical modeling, design, contemporary
+        software tools, professional practices and expectations (e.g. communication, teamwork, ethics), and the
+        diversity of fields and majors within engineering. </p>
+    <hr>
+    <h5><b>General Chemistry</b></h5>
+    <p>Principles of the science, character of the elements and their more important compounds, solution of
+        chemical problems, and important applications.</p>
+    <hr>
+    <h5><b>General Chemistry Lab</b></h5>
+    <p>Accompanies 1035-1036. Selected experiments illustrate principles taught in lecture.</p>
+    <hr>
+    <h5><b>Intro to Spatial Visualization</b></h5>
+    <p>Introduction to spatial visualization. Training to improve three-dimensional visualization skills.
+        Does not count towards College of Engineering graduation credit.</p>
+    <hr>
+    <h5><b>Knowledge and Reality</b></h5>
+    <p>Examines the questions: What is the nature of reality? How do I know what is real and what is misleading
+        appearance, error, or illusion? What is knowledge? How do I find out who I am and how I relate to the
+        world around me?</p>
+    <hr>
+    </div>
 </div>
 
 <div class="mainContent">
@@ -151,31 +284,16 @@ div.mainContent {
                   {"name" : "Combinatorics", "children" : [{"name" : "Applied Combinatorics"}]},
                   {"name" : "Cryptography", "children" : [{"name" : "Cryptography I"}]}
               ] },
-              {"name" : "Business", "children" : [
-                  {"name" : "Communication", "children" : [{"name" : "Public Speaking"}]},
-                  {"name" : "Management", "children" : [{"name" : "Cornerstones Entrepreneurship"}]},
-              ] },
               {"name" : "Engineering", "children" : [
                   {"name" : "Foundations of Engineering I"},
                   {"name" : "Foundations of Engineering II"},
                   {"name" : "Intro Spatial Visualization"}
               ] },
-                {"name" : "Humanities", "children" : [
-                  {"name" : "Philosophy", children: [{"name" : "Knowledge and Reality"}]},
-                  {"name" : "Geography", children: [{"name" : "World Regions"}]},
-                  {"name" : "Fine Arts", children: [{"name" : "Creativity & Aesthetic Experience"}]},
-                  {"name" : "Music", children: [{"name" : "Music Appreciation"}]},
-                  {"name" : "Social Studies", children: [{"name" : "Monsters, Zombies, & Cyborgs"}]},
-                    {"name" : "Human Development", children: [{"name" : "Human Development I"},
-                  {"name" : "Human Development II"}]},
+                {"name" : "Business", "children" : [
+                  {"name" : "Communication", "children" : [{"name" : "Public Speaking"}]},
+                  {"name" : "Management", "children" : [{"name" : "Intro Entrepreneurship"}]},
               ]},
-                {"name" : "Computer Science", "children" : [
-                  {"name" : "Software Design & Data Structures"},
-                  {"name" : "Intro Computer Organization"},
-                  {"name" : "Data Structures and Algorithms"},
-                  {"name" : "Human-Computer Interaction"}
-              ] },
-                      {"name" : "Data Science", "children" : [
+               {"name" : "Data Science", "children" : [
                   {"name" : "Intro Data Analytics & Visualization"},
                   {"name" : "Math Modeling: Methods & Tools I"},
                   {"name" : "Math Modeling: Methods & Tools II"},
@@ -183,16 +301,31 @@ div.mainContent {
                   {"name" : "Intermediate Data Analytics & Machine Learning"},
                   {"name" : "Computer Modeling & Data Analytics Capstone"}
               ] },
+                {"name" : "Computer Science", "children" : [
+                  {"name" : "Software Design & Data Structures"},
+                  {"name" : "Intro Computer Organization"},
+                  {"name" : "Data Structures and Algorithms"},
+                  {"name" : "Human-Computer Interaction"}
+              ] },
+                {"name" : "Humanities", "children" : [
+                  {"name" : "Philosophy", children: [{"name" : "Knowledge and Reality"}]},
+                  {"name" : "Geography", children: [{"name" : "World Regions"}]},
+                  {"name" : "Arts", children: [{"name" : "Creativity & Aesthetic Experience"},
+                  {"name" : "Music Appreciation"}]},
+                  {"name" : "Social", children: [{"name" : "Monsters, Zombies, & Cyborgs"},
+                  {"name" : "Human Development I"},
+                  {"name" : "Human Development II"}]}
+              ]}
                   ]};
 
-  var diameter = 1300;
+  var diameter = 965;
   var tree = d3.layout.tree()
       .size([360, diameter / 2 - 190])
       .separation(function(a, b) { return (a.parent == b.parent ? 1 : 2) / a.depth; });
   var diagonal = d3.svg.diagonal.radial()
       .projection(function(d) { return [d.y, d.x / 180 * Math.PI]; });
   var svg = d3.select("body").append("svg")
-      .attr("width", diameter + 20)
+      .attr("width", diameter - 40)
       .attr("height", diameter - 40)
     .append("g")
       .attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");
